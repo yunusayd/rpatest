@@ -27,18 +27,12 @@ def open_page():
     global browser
     browser.get(props.url)
     search_elem = browser.find_elements(
-            By.ID, props.search_path)[0]
+            By.NAME, props.search_path_name)[0]
     search_elem.clear()
     search_elem.send_keys("korona son haberler")
     search_button = browser.find_elements(
-            By.ID, props.search_button)[0]
+            By.NAME, props.search_button_name)[0]
     search_button.click()
-    time.sleep(3)
-    first_result_elem = browser.find_elements(
-            By.ID, props.first_result_link)[0]
-    link_address = first_result_elem.get_attribute['href']
-    browser.get(link_address)
-    
 
 def quit():
     global browser
