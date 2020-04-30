@@ -29,8 +29,7 @@ def open_page():
     search_elem = browser.find_elements(
             By.NAME, props.search_path_name)[0]
     search_elem.clear()
-    search_elem.send_keys("korona son haberler")
-    time.sleep(2)
+    search_elem.send_keys(props.search_text)
     search_button = browser.find_elements(
             By.NAME, props.search_button_name)[0]
     browser.execute_script("arguments[0].click();", search_button)
@@ -46,4 +45,4 @@ open_browser()
 open_page()
 while True:
     open_page()
-    time.sleep(15)
+    time.sleep(10)
