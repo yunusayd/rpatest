@@ -30,9 +30,10 @@ def open_page():
             By.NAME, props.search_path_name)[0]
     search_elem.clear()
     search_elem.send_keys("korona son haberler")
+    time.sleep(2)
     search_button = browser.find_elements(
             By.NAME, props.search_button_name)[0]
-    search_button.click()
+    browser.execute_script("arguments[0].click();", search_button)
 
 def quit():
     global browser
