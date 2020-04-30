@@ -43,3 +43,4 @@ def quit():
 atexit.register(quit)
 open_browser()
 open_page()
+time.sleep(30)
