@@ -1,22 +1,22 @@
 # rpatest
 
- 1. python3 kurulumu yapılmalı bendeki version 3.6.9
+ 1. python 3 kurulumu yapılmalı bendeki version 3.6.9 (daha yenisi de sorun olmaz)
 
-        python3 --version
+        python --version
         
         Python 3.6.9
 
  2. Pip kurulmalı (ben projeye ekledim, proje dizininde aşağıdaki komut çalıştırabiliriz.)
  		
-		python3 get-pip.py
+		python get-pip.py
 
- 3. Pip aracılığı ile proje gereksinimleri kurulmalı (pip3 yok derse pip olarak da denenebilir)
+ 3. Pip aracılığı ile proje gereksinimleri kurulmalı (chrome driverı vs indirecek)
 
-	    pip3 install -r requirements.txt
+	    pip install -r requirements.txt
 
  4. ChromeDriver path'e eklenmeli bunun için;
 
-		pip3 show chromedriver-binary
+		pip show chromedriver-binary
 
     komutu çalıştırılınca gelen yerde chrome_driver_binary altındaki chromedriver path de olmalı ( her yerden chromedriver yazıldığında çalışabilmeli)
     
@@ -24,7 +24,7 @@
     
         Environment System Variables da Path'e bu adres te eklenmeli 
         
-            c:\Users\is97459\AppData\Local\Programs\Python\Python36\Lib\site-packages\chromedriver_binary\
+            c:\Users\user\AppData\Local\Programs\Python\Python36\Lib\site-packages\chromedriver_binary\
             
         bende bu şekilde ekli
         
@@ -39,5 +39,5 @@
 
  5. Uygulama çalıştırma (program dizinindeyken)
     
-		python3 web_scrapper.py
+		python web_scrapper.py
     
